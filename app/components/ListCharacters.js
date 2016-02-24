@@ -22,11 +22,7 @@ export default class ListCharacters extends React.Component {
 		console.log( 'render', this.state)
 		const getCharacters = characters.map((character, index) => {
 			console.log('getCharacters: ', character)
-			if( '' === character.nameHonorific || undefined === character.nameHonorific) {
-				return <li key={character.id}> {character.nameBase} </li>		
-			} else {
-				return <li key={character.id}> {character.nameHonorific + ' ' + character.nameBase} </li>
-			}
+			return <ListCharacterRow character={character} />
 		})
 		return(
 			<ul className="characterList">

@@ -9,7 +9,11 @@ export default class ListCharacterRow extends React.Component {
 	render() {
 		return(
 			<li className="characterRow">
-				{this.props.id}
+				<div className="characterContainer">
+					<span className="character-image"><img src={ "http://skylanders.com/content/dam/atvi/skylanders/base/characters-v2/toy/" + this.props.character.id + ".png"}/></span>
+					<span>{this.props.character.game}</span>
+					<span>{this.props.character.id}</span>
+				</div>
 			</li>
 		)
 	}
